@@ -100,9 +100,6 @@ const likePost = async (req, res) => {
         res.json(error.message);
     }
 
-    // get the key first to be able to work with it
-    // const gottenLikes = thePost.likes;
-    // gottenLikes.push(name);
 };
 
 module.exports = {makePost, getPosts, getSinglePost, likePost, updatePost, deletePost};

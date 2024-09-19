@@ -43,17 +43,5 @@ const login = async (req, res) => {
     }
 };
 
-const testjwt = async (req, res) => {
-    const {token} = req.body;
-    const info = jwt.verify(token, process.env.JWT_SECRETE, (err, info) => {
-        if (err) {
-            console.log(err);
-            res.json({error: err.message});
-        } else {
-            console.log(info);
-            res.json(info);
-        }
-    })
-}
 
-module.exports = {register, login, testjwt};
+module.exports = {register, login};

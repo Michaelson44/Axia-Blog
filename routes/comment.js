@@ -4,7 +4,7 @@ const {verify} = require("../middlewares/verify");
 const router = express.Router();
 
 router.post('/comment',verify, makeComment);
-router.get('/comment', verify,getComment);
-router.get('/comments', verify,getComments);
+router.get('/comment', getComment);
+router.get('/comments', getComments);
 
 module.exports = router;
